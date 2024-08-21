@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Petshopku E-commerce</title>
+    <meta name="description" content />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all,follow" />
+    <!-- Custom font-->
+    <link rel="stylesheet" href="fonts/stylesheet.e9dc714d.css" />
+    <!-- Swiper-->
+    <link
+      rel="stylesheet"
+      href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/swiper/swiper-bundle.min.css"
+    />
+    <!-- AOS - AnimationOnScroll-->
+    <link
+      rel="stylesheet"
+      href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/aos/aos.css"
+    />
+    <!-- Custom Scrollbar-->
+    <link
+      rel="stylesheet"
+      href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"
+    />
+    <!-- Theme stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/css/style.default.db81a5a2.css"
+      id="theme-stylesheet"
+    />
+    <!-- Custom stylesheet - for your changes-->
+    <link
+      rel="stylesheet"
+      href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/css/custom.0a822280.css"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <!-- FontAwesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-5">
+        <a class="navbar-brand" href="index.html">PETSHOPKU</a>
+        <ul class="list-inline mb-0 d-block d-lg-none">
+          <li class="list-inline-item me-3">
+            <a
+              class="text-info text-info-hover"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              <svg class="svg-icon navbar-icon">
+                <use xlink:href="#avatar-1"></use></svg
+            ></a>
+          </li>
+          <li class="list-inline-item me-3">
+            <a
+              class="text-info text-info-hover position-relative"
+              href="wishlist.html"
+            >
+              <svg class="svg-icon navbar-icon">
+                <use xlink:href="#heart-1"></use>
+              </svg>
+              <div class="navbar-icon-badge">3</div></a
+            >
+          </li>
+          <li class="list-inline-item position-relative me-3">
+            <a
+              class="text-info text-info-hover"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#sidebarCart"
+            >
+              <svg class="svg-icon navbar-icon">
+                <use xlink:href="#retail-bag-1"></use>
+              </svg>
+              <div class="navbar-icon-badge">5</div></a
+            >
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <svg class="svg-icon navbar-icon">
+            <use xlink:href="#menu-hamburger-1"></use>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="homeDropdown"
+                href="index.html"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="shopDropdown"
+                href="arsip-artikel.html"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Artikel</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="productCardsDropdown"
+                href="katalog-produk.html"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Katalog Produk</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a
+                class="nav-link"
+                id="productCardsDropdown"
+                href="user-akun.html"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Profil</a
+              >
+            </li>
+          </ul>
+          <form
+            class="d-lg-flex ms-auto me-lg-5 me-xl-6 my-4 my-lg-0"
+            action="#"
+          >
+            <div class="input-group input-group-underlined">
+              <input
+                class="form-control form-control-underlined ps-3"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="button-search"
+              />
+              <button
+                class="btn btn-underlined"
+                id="button-search"
+                type="button"
+              >
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="list-inline mb-0 d-none d-lg-block">
+            <li class="list-inline-item me-3">
+              <a
+                class="text-info text-info-hover"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                <i class="fa fa-user-o" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li class="list-inline-item me-3">
+              <a
+                class="text-info text-info-hover position-relative"
+                href="wishlist.html"
+              >
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <div class="navbar-icon-badge">3</div></a
+              >
+            </li>
+            <li class="list-inline-item position-relative me-3">
+              <a
+                class="text-info text-info-hover"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#sidebarCart"
+              >
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <div class="navbar-icon-badge">5</div></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section-->
+    <section class="hero py-6">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb ps-0 ">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Profil</li>
+        </ol>
+        <!-- Hero Content-->
+        <div class="hero-content">
+          <h1 class="hero-heading text-info">Profil Anda</h1>
+          <div>
+            <p class="lead text-muted">
+              Silahkan untuk kustomisasi profil anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pb-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-xl-9 mb-5 mb-lg-0">
+            <div class="mb-5">
+              <h3 class="mb-5">Ganti Passwordmu</h3>
+              <form>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label class="form-label" for="password_old"
+                        >Password lama</label
+                      >
+                      <input
+                        class="form-control"
+                        id="password_old"
+                        type="password"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label class="form-label" for="password_1"
+                        >Password Baru</label
+                      >
+                      <input
+                        class="form-control"
+                        id="password_1"
+                        type="password"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label class="form-label" for="password_2"
+                        >Ketikan Ulang Password Baru</label
+                      >
+                      <input
+                        class="form-control"
+                        id="password_2"
+                        type="password"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <button class="btn btn-info" type="submit">
+                    <i class="far fa-save me-2"></i>Ubah Password
+                  </button>
+                </div>
+              </form>
+            </div>
+            <hr class="mb-5" />
+            <h3 class="mb-5">Informasi Pribadi</h3>
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="firstname">Nama Depan</label>
+                    <input class="form-control" id="firstname" type="text" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="lastname"
+                      >Nama Belakang</label
+                    >
+                    <input class="form-control" id="lastname" type="text" />
+                  </div>
+                </div>
+              </div>
+              <!-- /.row-->
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="company">Perusahaan</label>
+                    <input class="form-control" id="company" type="text" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="street">Alamat</label>
+                    <input class="form-control" id="street" type="text" />
+                  </div>
+                </div>
+              </div>
+              <!-- /.row-->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="mb-3">
+                    <label class="form-label" for="city">Kota</label>
+                    <input class="form-control" id="city" type="text" />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="mb-3">
+                    <label class="form-label" for="zip">Kode Pos</label>
+                    <input class="form-control" id="zip" type="text" />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="mb-3">
+                    <label class="form-label" for="state">Kecamatan</label>
+                    <select class="form-control" id="state"></select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="mb-3">
+                    <label class="form-label" for="country">Kelurahan</label>
+                    <select class="form-control" id="country"></select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="phone">Telepon</label>
+                    <input class="form-control" id="phone" type="text" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="emailAccount">Email</label>
+                    <input class="form-control" id="emailAccount" type="text" />
+                  </div>
+                </div>
+              </div>
+              <!-- /.row-->
+              <div class="mt-4"></div>
+              <button class="btn btn-info" type="submit">
+                <i class="far fa-save me-2"></i>Simpan Perubahan
+              </button>
+            </form>
+          </div>
+          <!-- Customer Sidebar-->
+          <div class="col-xl-3 col-lg-4 mb-5">
+            <div class="customer-sidebar card border-0">
+              <div class="customer-profile">
+                <a class="d-inline-block" href="#"
+                  ><img
+                    class="img-fluid rounded-circle customer-image"
+                    src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/avatar/avatar-0.jpg"
+                    alt
+                /></a>
+                <h5>Dewi Sartika</h5>
+                <p class="text-muted text-sm mb-0">Surabaya</p>
+              </div>
+              <nav class="list-group customer-nav">
+                <a
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  href="user-history.html"
+                  ><span>
+                    <i class="fas fa-history fa-fw"></i> Riwayat Pesanan</span
+                  >
+                  <div
+                    class="badge rounded-pill bg-light text-info fw-normal px-3"
+                  >
+                    5
+                  </div></a
+                ><a
+                  class="active list-group-item d-flex justify-content-between align-items-center"
+                  href="user-akun.html"
+                  ><span> <i class="fas fa-user fa-fw"></i> Profil</span></a
+                ><a
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  href="user-alamat.html"
+                  ><span>
+                    <i class="fas fa-map-marked-alt fa-fw"></i> Alamat</span
+                  ></a
+                ><a
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  href="user-whistlist.html"
+                  ><span>
+                    <i class="fab fa-gratipay fa-fw"></i> Wishlist</span
+                  ></a
+                ><a
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                  href="user-login.html"
+                  ><span>
+                    <i class="fas fa-sign-out-alt fa-fw"></i> Log out</span
+                  ></a
+                >
+              </nav>
+            </div>
+          </div>
+          <!-- /Customer Sidebar-->
+        </div>
+      </div>
+    </section>
+    <!-- Sidebar Cart Modal-->
+    <div
+      class="modal fade modal-right"
+      id="sidebarCart"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content sidebar-cart-content">
+          <div class="modal-header mb-3 border-0">
+            <button
+              class="btn-close btn-close-lg btn-close-rotate opacity-8"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-5 sidebar-cart-body">
+            <!-- Empty cart snippet-->
+            <!-- In case of empty cart - display this snippet + remove .d-none-->
+            <div class="d-none text-center mb-5">
+              <svg
+                class="svg-icon w-3rem h-3rem svg-icon-light mb-4 text-muted"
+              >
+                <use xlink:href="#retail-bag-1"></use>
+              </svg>
+              <p>Your cart is empty</p>
+            </div>
+            <!-- Empty cart snippet end-->
+            <div class="sidebar-cart-product-wrapper custom-scrollbar">
+              <!-- cart item-->
+              <div class="navbar-cart-product">
+                <div class="d-flex align-items-center">
+                  <a href="detail-produk.html"
+                    ><img
+                      class="img-fluid navbar-cart-product-image"
+                      src="img/product/whiskas.jpg"
+                      alt="..."
+                  /></a>
+                  <div class="w-100">
+                    <a class="navbar-cart-product-remove" href="#!">
+                      <i class="fa fa-close fa-fw"></i>
+                    </a>
+                    <div class="ps-3">
+                      <a
+                        class="navbar-cart-product-link text-info link-animated"
+                        href="detail-produk.html"
+                        >Whiskas</a
+                      ><small class="d-block text-muted">Jumlah: 1 </small
+                      ><strong class="d-block text-sm">Rp75.000 </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- cart item-->
+              <div class="navbar-cart-product">
+                <div class="d-flex align-items-center">
+                  <a href="detail-produk.html"
+                    ><img
+                      class="img-fluid navbar-cart-product-image"
+                      src="img/product/royalcanin.jpg"
+                      alt="..."
+                  /></a>
+                  <div class="w-100">
+                    <a class="navbar-cart-product-remove" href="#!">
+                      <i class="fa fa-close fa-fw"></i>
+                    </a>
+                    <div class="ps-3">
+                      <a
+                        class="navbar-cart-product-link text-info link-animated"
+                        href="detail-produk.html"
+                        >Royal Canin</a
+                      ><small class="d-block text-muted">Jumlah: 1 </small
+                      ><strong class="d-block text-sm">Rp75.000 </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- cart item-->
+              <div class="navbar-cart-product">
+                <div class="d-flex align-items-center">
+                  <a href="detail-produk.html"
+                    ><img
+                      class="img-fluid navbar-cart-product-image"
+                      src="img/product/kirkland.jpeg"
+                      alt="..."
+                  /></a>
+                  <div class="w-100">
+                    <a class="navbar-cart-product-remove" href="#!">
+                      <i class="fa fa-close fa-fw"></i>
+                    </a>
+                    <div class="ps-3">
+                      <a
+                        class="navbar-cart-product-link text-info link-animated"
+                        href="detail-produk.html"
+                        >Kirkland</a
+                      ><small class="d-block text-muted">Jumlah: 1 </small
+                      ><strong class="d-block text-sm">Rp75.000 </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer sidebar-cart-footer shadow">
+            <div class="w-100">
+              <h5 class="mb-4">
+                Subtotal: <span class="float-right">Rp225.000</span>
+              </h5>
+              <div class="d-grid gap-3">
+                <a class="btn btn-outline-info" href="keranjang.html"
+                  >Lihat Keranjang</a
+                ><a class="btn btn-info" href="pembayaran.html">Bayar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal    -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button
+            class="btn-close btn-close-absolute btn-close-lg btn-close-rotate"
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body p-5">
+            <ul class="nav list-inline" role="tablist">
+              <li class="list-inline-item">
+                <a
+                  class="nav-link nav-link-lg active"
+                  data-bs-toggle="tab"
+                  href="#loginModalTabLogin"
+                  role="tab"
+                  id="loginModalLinkLogin"
+                  aria-controls="loginModalTabLogin"
+                  aria-selected="true"
+                  >Login</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="nav-link nav-link-lg"
+                  data-bs-toggle="tab"
+                  href="#loginModalTabRegister"
+                  role="tab"
+                  id="loginModalLinkRegister"
+                  aria-controls="loginModalTabRegister"
+                  aria-selected="false"
+                  >Register</a
+                >
+              </li>
+            </ul>
+            <hr class="mb-3" />
+            <div class="tab-content">
+              <div
+                class="tab-pane active fade show px-3"
+                id="loginModalTabLogin"
+                role="tabpanel"
+                aria-labelledby="loginModalLinkLogin"
+              >
+                <form action="customer-orders.html" method="get">
+                  <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" type="text" />
+                  </div>
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col">
+                        <label class="form-label" for="loginPassword">
+                          Password</label
+                        >
+                      </div>
+                      <div class="col-auto">
+                        <a class="form-text small" href="#">Forgot password?</a>
+                      </div>
+                    </div>
+                    <input
+                      class="form-control"
+                      name="loginPassword"
+                      id="loginPassword"
+                      placeholder="Password"
+                      type="password"
+                      required
+                      data-msg="Please enter your password"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        id="loginRemember"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label text-muted"
+                        for="loginRemember"
+                      >
+                        <span class="text-sm"
+                          >Remember me for 30 days</span
+                        ></label
+                      >
+                    </div>
+                  </div>
+                  <div class="d-grid mb-3">
+                    <button class="btn btn-outline-info" type="submit">
+                      <i class="fa fa-sign-in-alt me-2"></i> Log in
+                    </button>
+                  </div>
+                </form>
+                <hr class="my-3 hr-text letter-spacing-2" data-content="OR" />
+                <div class="text-center">
+                  <button
+                    class="btn btn btn-outline-info letter-spacing-0"
+                    data-bs-toggle="tooltip"
+                    title="Connect with Facebook"
+                  >
+                    <i class="fa-fw fa-facebook-f fab"></i
+                    ><span class="sr-only">Connect with Facebook</span>
+                  </button>
+                  <button
+                    class="btn btn btn-outline-muted letter-spacing-0"
+                    data-bs-toggle="tooltip"
+                    title="Connect with Google"
+                  >
+                    <i class="fa-fw fa-google fab"></i
+                    ><span class="sr-only">Connect with Google</span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade px-3"
+                id="loginModalTabRegister"
+                role="tabpanel"
+                aria-labelledby="loginModalLinkRegister"
+              >
+                <p class="text-muted text-sm">
+                  The bedding was hardly able to cover it and seemed ready to
+                  slide off any moment. His many legs, pit.
+                </p>
+                <form action="customer-orders.html" method="get">
+                  <div class="mb-3">
+                    <label class="form-label" for="registerName">Name</label>
+                    <input class="form-control" id="registerName" type="text" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="registerEmail">Email</label>
+                    <input
+                      class="form-control"
+                      id="registerEmail"
+                      type="text"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="registerPassword"
+                      >Password</label
+                    >
+                    <input
+                      class="form-control"
+                      id="registerPassword"
+                      type="password"
+                    />
+                  </div>
+                  <div class="d-grid mb-3 text-center">
+                    <button class="btn btn-outline-info" type="submit">
+                      <i class="far fa-user me-2"></i>Register
+                    </button>
+                  </div>
+                </form>
+                <hr
+                  class="my-3 hr-text letter-spacing-2"
+                  data-content="OR CONNECT WITH"
+                />
+                <div class="text-center">
+                  <button
+                    class="btn btn btn-outline-info letter-spacing-0"
+                    data-bs-toggle="tooltip"
+                    title="Connect with Facebook"
+                  >
+                    <i class="fa-fw fa-facebook-f fab"></i
+                    ><span class="sr-only">Connect with Facebook</span>
+                  </button>
+                  <button
+                    class="btn btn btn-outline-muted letter-spacing-0"
+                    data-bs-toggle="tooltip"
+                    title="Connect with Google"
+                  >
+                    <i class="fa-fw fa-google fab"></i
+                    ><span class="sr-only">Connect with Google </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer>
+      <!-- Main block - menus, subscribe form-->
+      <div class="py-6 text-muted">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 pe-lg-5 pe-xl-6 mb-5 mb-lg-0">
+              <h6 class="text-info letter-spacing-1 mb-4">PETSHOPKU</h6>
+              <p class="text-sm mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                itaque temporibus.
+              </p>
+              <!-- <form action="#" id="newsletter-form">
+                <div class="input-group input-group-underlined mb-3">
+                  <input class="form-control form-control-underlined" type="email" placeholder="Your Email Address" aria-label="Your Email Address">
+                  <button class="btn btn-underlined text-gray-700 py-0" type="button"> 
+                    <svg class="svg-icon w-2rem h-2rem">
+                      <use xlink:href="#envelope-1"> </use>
+                    </svg>
+                  </button>
+                </div>
+              </form> -->
+            </div>
+            <div class="col-lg-7">
+              <div class="row">
+                <div class="col-lg-6">
+                  <a
+                    class="d-lg-none block-toggler my-3"
+                    data-bs-toggle="collapse"
+                    href="#footerMenu0"
+                    aria-expanded="false"
+                    aria-controls="footerMenu0"
+                    >Belanja<span class="block-toggler-icon"></span
+                  ></a>
+                  <!-- Footer collapsible menu-->
+                  <div class="expand-lg collapse" id="footerMenu0">
+                    <h6
+                      class="text-info letter-spacing-1 mb-4 d-none d-lg-block"
+                    >
+                      Belanja
+                    </h6>
+                    <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                      <li class="mb-2">
+                        <a
+                          class="text-muted text-info-hover link-animated"
+                          href="#"
+                          >Pet Product</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="text-muted text-info-hover link-animated"
+                          href="#"
+                          >Pet Service</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <a
+                    class="d-lg-none block-toggler my-3"
+                    data-bs-toggle="collapse"
+                    href="#footerMenu2"
+                    aria-expanded="false"
+                    aria-controls="footerMenu2"
+                    >Akun Anda<span class="block-toggler-icon"></span
+                  ></a>
+                  <!-- Footer collapsible menu-->
+                  <div class="expand-lg collapse" id="footerMenu2">
+                    <h6
+                      class="text-info letter-spacing-1 mb-4 d-none d-lg-block"
+                    >
+                      Your account
+                    </h6>
+                    <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                      <li class="mb-2">
+                        <a
+                          class="text-muted text-info-hover link-animated"
+                          href="user-login.html"
+                          >Login</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="text-muted text-info-hover link-animated"
+                          href="user-login.html"
+                          >Register</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="text-muted text-info-hover link-animated"
+                          href="wishlist.html"
+                          >Wishlist</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="text-muted text-info-hover link-animated"
+                          href="katalog-produk.html"
+                          >Produk Kami</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="text-muted text-info-hover link-animated"
+                          href="pembayaran.html"
+                          >Pembayaran</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright section of the footer-->
+      <div class="py-4 fw-light text-muted">
+        <div class="container">
+          <div class="row align-items-center text-sm text-gray-500">
+            <div class="col-lg-4 text-center text-lg-start">
+              <p class="mb-lg-0">
+                &copy; 2024, Petshopku. All rights reserved.
+              </p>
+            </div>
+            <div class="col-lg-8">
+              <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-lg-end">
+                <li class="list-inline-item">
+                  <a class="text-reset" href="#">Terms &amp; Conditions </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="text-reset" href="#">Privacy &amp; cookies </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="text-reset" href="#">Accessibility </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="text-reset" href="#">Customer Data Promise </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer end-->
+    <!-- JavaScript files-->
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite -
+      //   see more here
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to Bootstrapious website as you cannot
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.3f375885.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/icons/orion-svg-sprite.svg');
+      injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/icons/varkala-clothes.svg');
+      injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/img/shape/blob-sprite.svg');
+    </script>
+    <!-- jQuery-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Bundle -->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper Carousel                       -->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Bootstrap Select-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!-- AOS - AnimationOnScroll-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/aos/aos.js"></script>
+    <!-- Custom Scrollbar-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom-scrollbar-init.f148089f.js"></script>
+    <!-- Smooth scroll-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <!-- Object Fit Images - Fallback for browsers that don't support object-fit-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/object-fit-images/ofi.min.js"></script>
+    <!-- Some theme config-->
+    <script>
+      var options = {
+          navbarExpandPx: 992
+      }
+    </script>
+    <!-- Main Theme files-->
+    <script src="js/sliders-init.d339d105.js"></script>
+    <script src="js/theme.4c87e97a.js"></script>
+  </body>
+</html>

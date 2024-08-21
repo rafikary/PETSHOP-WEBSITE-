@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Petshopku E-commerce</title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Custom font-->
+    <link rel="stylesheet" href="fonts/stylesheet.e9dc714d.css">
+    <!-- Swiper-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/swiper/swiper-bundle.min.css">
+    <!-- AOS - AnimationOnScroll-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/aos/aos.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- Theme stylesheet-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/css/style.default.db81a5a2.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-1/css/custom.0a822280.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header header-absolute"> 
+      <nav class="navbar navbar-expand-lg bg-dark bg-opacity-50 border-0 shadow-0 navbar-dark px-lg-5 "><a class="navbar-brand" href="index.html">PETSHOPKU</a>
+        <ul class="list-inline mb-0 d-block d-lg-none">
+          <li class="list-inline-item me-3"><a class="text-info text-info-hover" href="index.html" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa fa-user-o text-white" aria-hidden="true"></i>
+          <li class="list-inline-item me-3"><a class="text-info text-info-hover position-relative" href="wishlist.html">
+            <i class="fa fa-heart-o text-white" aria-hidden="true"></i>
+          <li class="list-inline-item position-relative me-3"><a class="text-info text-info-hover" href="#" data-bs-toggle="modal" data-bs-target="#sidebarCart">
+            <i class="fa fa-shopping-cart text-white" aria-hidden="true"></i>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mt-3 mt-lg-0">
+            <li class="nav-item active"><a class="nav-link" id="homeDropdown" href="#" aria-haspopup="true" aria-expanded="false">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" id="shopDropdown" href="arsip-artikel.html" aria-haspopup="true" aria-expanded="false">Artikel</a>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link" id="productCardsDropdown" href="katalog-produk.html" aria-haspopup="true" aria-expanded="false">Katalog Produk</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" id="productCardsDropdown" href="user-akun.html" aria-haspopup="true" aria-expanded="false">Profil</a>
+          </ul>
+          <form class="d-lg-flex ms-auto me-lg-5 me-xl-6 my-4 my-lg-0" action="#">
+            <div class="input-group input-group-underlined">
+              <input class="form-control form-control-underlined ps-3" type="text" placeholder="Search" aria-label="Search" aria-describedby="button-search">
+              <button class="btn btn-underlined" id="button-search" type="button"> 
+                <i class="fa fa-search text-light" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="list-inline mb-0 d-none d-lg-block">
+            <li class="list-inline-item me-3"><a class="text-info text-info-hover" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user-o text-light" aria-hidden="true"></i>
+            <li class="list-inline-item me-3"><a class="text-info text-info-hover position-relative" href="wishlist.html">
+              <i class="fa fa-heart-o text-light" aria-hidden="true"></i>
+            <li class="list-inline-item position-relative me-3"><a class="text-info text-info-hover" href="#" data-bs-toggle="modal" data-bs-target="#sidebarCart">
+              <i class="fa fa-shopping-cart text-light" aria-hidden="true"></i>
+            <!-- <li class="list-inline-item"><a class="text-info text-info-hover" href="#" data-bs-toggle="modal" data-bs-target="#sidebarRight">
+              <i class="fa fa-bars" aria-hidden="true"></i> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Slider main container-->
+    <div class="swiper swiper-container home-slider" style="height: 95vh; min-height: 600px;">
+      <!-- Additional required wrapper-->
+      <div class="swiper-wrapper">
+        <!-- Slides-->
+        <div class="swiper-slide bg-cover bg-cover-right" style="background-image: url(&#x27;https://images.unsplash.com/photo-1641762997974-008af23e7547?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&#x27;);">
+          <div class="overlay"></div>
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-info font-weight-light">Selamat Datang di</p>
+                <h2 class="display-1 mb-3" style="line-height: 1">PETSHOPKU</h2>
+                <p class="text-black mb-5">Tempat Lengkap untuk Kebutuhan Hewan Peliharaan Anda</p>
+                <a class="btn btn-info" href="#">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url(&#x27;https://images.unsplash.com/photo-1632239484316-e0f0a6fba583?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&#x27;);">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 justify-content-center align-items-center text-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-info font-weight-light">Jangan Ragu</p>
+                <h2 class="display-1 mb-3 text-info" style="line-height: 1">Produk Kami Terbaik</h2><a class="btn btn-info text-light" href="#">Mulai Belanja</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url(&#x27;https://images.unsplash.com/photo-1627245184994-962ec97bebfb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&#x27;);">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6 offset-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-info font-weight-light mb-4">Layanan</p>
+                <h2 class="display-1 mb-5 text-light" style="line-height: 1">Untuk Hewan Peliharaanmu</h2><a class="btn btn-light text-info" href="#">Mulai Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-nav d-none d-lg-block">
+        <div class="swiper-button-prev" id="homePrev"></div>
+        <div class="swiper-button-next" id="homeNext"></div>
+      </div>
+    </div>
+    <!-- Categories big-->
+    <div class="bg-gray-100 position-relative">
+      <div class="container py-6">
+        <div class="row">
+          <div class="col-sm-6 mb-5 mb-sm-0">
+            <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center"><img class="card-img img-scale" src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image">
+              <div class="card-img-overlay d-flex align-items-center"> 
+                <div class="w-100 py-3">
+                  <h2 class="display-3 fw-bold mb-0">Produk</h2><a class="stretched-link" href="katalog-produk.html"><span class="sr-only">Lihat </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-5 mb-sm-0">
+            <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center"><img class="card-img img-scale" src="https://images.unsplash.com/photo-1623099354893-9a1fbd0dbb3f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image">
+              <div class="card-img-overlay d-flex align-items-center"> 
+                <div class="w-100 py-3">
+                  <h2 class="display-3 fw-bold mb-0">Pelayanan</h2><a class="stretched-link" href="katalog-produk.html"><span class="sr-only">Lihat </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid container-fluid-px py-6">
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 text-center mx-auto">
+          <h2 class="display-3 mb-5 text-info">Petshopku</h2>
+          <p class="lead text-muted mb-6">Semua kebutuhan hewan peliharaan Anda, mulai dari makanan hingga mainan, tersedia di satu tempat. Temukan berbagai produk berkualitas untuk menjaga hewan peliharaan Anda tetap sehat dan bahagia.</p>
+        </div>
+      </div>
+      <div class="row justify-content-between align-items-center mb-4">
+        <div class="col-12 col-sm">
+          <ul class="list-inline text-center text-sm-start mb-3 mb-sm-0"> 
+            <li class="list-inline-item"><a class="text-info" href="#">All Products </a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-auto text-center"><a class="btn btn-link px-0" href="#">All products</a></div>
+      </div>
+      <div class="row">
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/bolt.jpg" alt="product"><img class="img-fluid" src="img/product/bolt.jpg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Bolt</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/breedpuppy.jpg" alt="product"><img class="img-fluid" src="img/product/breedpuppy.jpg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Breed Puppy</a></h3>
+              <p class="text-gray-600 text-sm">
+                <span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/cleo.png" alt="product"><img class="img-fluid" src="img/product/cleo.png" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Cleo</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/dentallife.jpg" alt="product"><img class="img-fluid" src="img/product/dentallife.jpg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Dental Life</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/excel.jpeg" alt="product"><img class="img-fluid" src="img/product/excel.jpeg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Excel</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/felibite.jpeg" alt="product"><img class="img-fluid" src="img/product/felibite.jpeg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Felibite</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/friskies.jpeg" alt="product"><img class="img-fluid" src="img/product/friskies.jpeg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Frieskies</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/kirkland.jpeg" alt="product"><img class="img-fluid" src="img/product/kirkland.jpeg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Kirkland</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/nutrition.jpeg" alt="product"><img class="img-fluid" src="img/product/nutrition.jpeg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Nutrition</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/royalcanin.jpg" alt="product"><img class="img-fluid" src="img/product/royalcanin.jpg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Royal Canin</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/vitacraft.jpeg" alt="product"><img class="img-fluid" src="img/product/vitacraft.jpeg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Vitacraft</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+        <!-- product-->
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+          <div class="product product-type-0" data-aos="zoom-in" data-aos-delay="0">
+            <div class="product-image mb-md-3">
+              <div class="product-badge badge bg-info">Fresh</div><a href="detail-produk.html">
+                <div class="product-swap-image"><img class="img-fluid product-swap-image-front" src="img/product/whiskas.jpg" alt="product"><img class="img-fluid" src="img/product/whiskas.jpg" alt="product"></div></a>
+              <div class="product-hover-overlay"><a class="text-info text-sm" href="#!">
+                  <svg class="svg-icon text-info-hover svg-icon-heavy d-sm-none">
+                    <use xlink:href="#retail-bag-1"> </use>
+                  </svg><span class="d-none d-sm-inline">Add to cart</span></a>
+                <div><a class="text-info text-info-hover me-2" href="#!">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#heart-1"> </use>
+                    </svg></a><a class="text-info text-info-hover text-decoration-none" href="#!" data-bs-toggle="modal" data-bs-target="#quickView">
+                    <svg class="svg-icon svg-icon-heavy">
+                      <use xlink:href="#expand-1"> </use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="position-relative">
+              <h3 class="text-base mb-1"><a class="text-info" href="detail-produk.html">Whiskas</a></h3>
+              <p class="text-gray-600 text-sm"> 
+                <s class="me-2 text-gray-500">Rp30.000</s><span>Rp20.000</span>
+              </p>
+              <div class="product-stars text-xs"><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-info"></i><i class="fa fa-star text-muted"></i><i class="fa fa-star text-muted"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- /product   -->
+      </div>
+      <!-- Quickview Modal    -->
+      <div class="modal fade quickview" id="quickView" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <button class="btn-close btn-close-absolute btn-close-lg btn-close-rotate" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body quickview-body">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="detail-carousel">
+                    <div class="product-badge badge bg-info">Fresh</div>
+                    <div class="product-badge badge bg-info">Sale</div>
+                    <div class="swiper swiper-container quickview-slider" id="quickViewSlider">
+                      <!-- Additional required wrapper-->
+                      <div class="swiper-wrapper">
+                        <!-- Slides-->
+                        <div class="swiper-slide"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-1-gray.jpg" alt="Modern Jacket 1"></div>
+                        <div class="swiper-slide"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-2-gray.jpg" alt="Modern Jacket 2"></div>
+                        <div class="swiper-slide"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-3-gray.jpg" alt="Modern Jacket 3"></div>
+                        <div class="swiper-slide"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-4-gray.jpg" alt="Modern Jacket 4"></div>
+                        <div class="swiper-slide"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-5-gray.jpg" alt="Modern Jacket 5"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-thumbs" data-swiper="#quickViewSlider">
+                      <button class="swiper-thumb-item detail-thumb-item mb-3 active"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-1-gray.jpg" alt="Modern Jacket 0"></button>
+                      <button class="swiper-thumb-item detail-thumb-item mb-3"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-2-gray.jpg" alt="Modern Jacket 1"></button>
+                      <button class="swiper-thumb-item detail-thumb-item mb-3"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-3-gray.jpg" alt="Modern Jacket 2"></button>
+                      <button class="swiper-thumb-item detail-thumb-item mb-3"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-4-gray.jpg" alt="Modern Jacket 3"></button>
+                      <button class="swiper-thumb-item detail-thumb-item mb-3"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/img/product/detail-5-gray.jpg" alt="Modern Jacket 4"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 p-lg-5">
+                  <h2 class="mb-4 mt-4 mt-lg-1">Push-up Jeans</h2>
+                  <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between mb-4">
+                    <ul class="list-inline mb-2 mb-sm-0">
+                      <li class="list-inline-item h4 fw-light mb-0">$65.00</li>
+                      <li class="list-inline-item text-muted fw-light"> 
+                        <del>$90.00</del>
+                      </li>
+                    </ul>
+                    <div class="d-flex align-items-center text-sm">
+                      <ul class="list-inline me-2 mb-0">
+                        <li class="list-inline-item me-0"><i class="fa fa-star text-info"></i></li>
+                        <li class="list-inline-item me-0"><i class="fa fa-star text-info"></i></li>
+                        <li class="list-inline-item me-0"><i class="fa fa-star text-info"></i></li>
+                        <li class="list-inline-item me-0"><i class="fa fa-star text-info"></i></li>
+                        <li class="list-inline-item me-0"><i class="fa fa-star text-gray-300"></i></li>
+                      </ul><span class="text-muted text-uppercase">25 reviews</span>
+                    </div>
+                  </div>
+                  <p class="mb-4 text-muted">Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+                  <form id="buyForm_modal" action="#">
+                    <div class="row">
+                      <div class="col-sm-6 col-lg-12 detail-option mb-4">
+                        <h6 class="detail-option-heading">Size <span>(required)</span></h6>
+                        <select class="selectpicker" name="size" data-style="btn-selectpicker">
+                          <option value="value_0">Small</option>
+                          <option value="value_1">Medium</option>
+                          <option value="value_2">Large</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-6 col-lg-12 detail-option mb-5">
+                        <h6 class="detail-option-heading">Type <span>(required)</span></h6>
+                        <label class="btn btn-sm btn-outline-info detail-option-btn-label" for="material_0_modal"> Hoodie
+                          <input class="input-invisible" type="radio" name="material" value="value_0" id="material_0_modal" required>
+                        </label>
+                        <label class="btn btn-sm btn-outline-info detail-option-btn-label" for="material_1_modal"> College
+                          <input class="input-invisible" type="radio" name="material" value="value_1" id="material_1_modal" required>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="input-group w-100 mb-4">
+                      <input class="form-control form-control-lg detail-quantity" name="items" type="number" value="1">
+                      <div class="flex-grow-1">
+                        <div class="d-grid h-100">
+                          <button class="btn btn-info" type="submit"> <i class="fa fa-shopping-cart me-2"></i>Add to Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-4">
+                      <div class="col-6"><a href="#"> <i class="far fa-heart me-2"></i>Add to wishlist </a></div>
+                      <div class="col-6 text-end">
+                        <ul class="list-inline mb-0">
+                          <li class="list-inline-item me-2"><a class="text-info text-info-hover" href="#"><i class="fab fa-facebook-f"> </i></a></li>
+                          <li class="list-inline-item"><a class="text-info text-info-hover" href="#"><i class="fab fa-twitter"> </i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><strong>Category:</strong> <a class="text-muted" href="#">Jeans</a></li>
+                      <li><strong>Tags:</strong> <a class="text-muted" href="#">Leisure</a>, <a class="text-muted" href="#">Elegant</a></li>
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-6 bg-cover bg-cover-right" style="background-image: url(img/product/promo.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-xl-6">
+            <p class="subtitle mb-3 text-danger">Promo Minggu Ini</p>
+            <h3 class="h1">Chicken Treats</h3>
+            <p class="text-muted">
+              <del class="me-3">Rp129.000</del><span>Rp79.000</span>
+            </p>
+            <p class="mb-4"><span class="badge bg-danger p-3">Diskon Rp.50.000</span></p>
+            <div class="bg-white px-5 py-4 shadow mb-4" id="countdown">
+              <div class="row justify-content-between">
+                <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                  <h6 class="h4 mb-2 days">&nbsp;</h6><span class="text-muted">Hari</span>
+                </div>
+                <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                  <h6 class="h4 mb-2 hours">&nbsp;</h6><span class="text-muted">Jam</span>
+                </div>
+                <div class="col-6 col-sm-3 text-center">
+                  <h6 class="h4 mb-2 minutes">&nbsp;</h6><span class="text-muted">Menit</span>
+                </div>
+                <div class="col-6 col-sm-3 text-center">
+                  <h6 class="h4 mb-2 seconds">&nbsp;</h6><span class="text-muted">Detik</span>
+                </div>
+              </div>
+            </div>
+            <p><a class="btn btn-outline-info" href="detail-produk.html">Beli Sekarang</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-6">
+      <h5 class="text-uppercase text-info letter-spacing-3 mb-3">Mengapa Harus Kami?</h5>
+      <p class="lead text-muted mb-4">Di Petshopku, kami memahami bahwa hewan peliharaan Anda adalah bagian dari keluarga. Itulah sebabnya kami berkomitmen untuk menyediakan produk dan layanan terbaik untuk kesejahteraan mereka.</p>
+    </div>
+    <div class="modal fade modal-right" id="sidebarCart" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content sidebar-cart-content">
+          <div class="modal-header mb-3 border-0">
+            <button class="btn-close btn-close-lg btn-close-rotate opacity-8" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-5 sidebar-cart-body">
+            <!-- Empty cart snippet-->
+            <!-- In case of empty cart - display this snippet + remove .d-none-->
+            <div class="d-none text-center mb-5">
+              <svg class="svg-icon w-3rem h-3rem svg-icon-light mb-4 text-muted">
+                <use xlink:href="#retail-bag-1"> </use>
+              </svg>
+              <p>Your cart is empty </p>
+            </div>
+            <!-- Empty cart snippet end-->
+            <div class="sidebar-cart-product-wrapper custom-scrollbar">
+              <!-- cart item-->
+              <div class="navbar-cart-product"> 
+                <div class="d-flex align-items-center"><a href="detail-produk.html"><img class="img-fluid navbar-cart-product-image" src="img/product/whiskas.jpg" alt="..."></a>
+                  <div class="w-100"><a class="navbar-cart-product-remove" href="#!">
+                    <i class="fa fa-close fa-fw"></i>  </a>
+                    <div class="ps-3"> <a class="navbar-cart-product-link text-info link-animated" href="detail-produk.html">Whiskas</a><small class="d-block text-muted">Jumlah: 1 </small><strong class="d-block text-sm">Rp75.000     </strong></div>
+                  </div>
+                </div>
+              </div>
+              <!-- cart item-->
+              <div class="navbar-cart-product"> 
+                <div class="d-flex align-items-center"><a href="detail-produk.html"><img class="img-fluid navbar-cart-product-image" src="img/product/royalcanin.jpg" alt="..."></a>
+                  <div class="w-100"><a class="navbar-cart-product-remove" href="#!">
+                      <i class="fa fa-close fa-fw"></i>  </a>
+                    <div class="ps-3"> <a class="navbar-cart-product-link text-info link-animated" href="detail-produk.html">Royal Canin</a><small class="d-block text-muted">Jumlah: 1 </small><strong class="d-block text-sm">Rp75.000     </strong></div>
+                  </div>
+                </div>
+              </div>
+              <!-- cart item-->
+              <div class="navbar-cart-product"> 
+                <div class="d-flex align-items-center"><a href="detail-produk.html"><img class="img-fluid navbar-cart-product-image" src="img/product/kirkland.jpeg" alt="..."></a>
+                  <div class="w-100"><a class="navbar-cart-product-remove" href="#!">
+                      <i class="fa fa-close fa-fw"></i>  </a>
+                    <div class="ps-3"> <a class="navbar-cart-product-link text-info link-animated" href="detail-produk.html">Kirkland</a><small class="d-block text-muted">Jumlah: 1 </small><strong class="d-block text-sm">Rp75.000     </strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer sidebar-cart-footer shadow">
+            <div class="w-100">
+              <h5 class="mb-4">Subtotal: <span class="float-right">Rp225.000</span></h5>
+              <div class="d-grid gap-3"><a class="btn btn-outline-info" href="keranjang.html">Lihat Keranjang</a><a class="btn btn-info" href="pembayaran.html">Bayar</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal    -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="btn-close btn-close-absolute btn-close-lg btn-close-rotate" type="button" data-bs-dismiss="modal" aria-label="Close">     </button>
+          <div class="modal-body p-5">
+            <ul class="nav list-inline" role="tablist">
+              <li class="list-inline-item"><a class="nav-link nav-link-lg active" data-bs-toggle="tab" href="#loginModalTabLogin" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin" aria-selected="true">Login</a></li>
+              <li class="list-inline-item"><a class="nav-link nav-link-lg" data-bs-toggle="tab" href="#loginModalTabRegister" role="tab" id="loginModalLinkRegister" aria-controls="loginModalTabRegister" aria-selected="false">Register</a></li>
+            </ul>
+            <hr class="mb-3">
+            <div class="tab-content">
+              <div class="tab-pane active fade show px-3" id="loginModalTabLogin" role="tabpanel" aria-labelledby="loginModalLinkLogin">
+                <form action="customer-orders.html" method="get">
+                  <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" type="text">
+                  </div>
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col">
+                        <label class="form-label" for="loginPassword"> Password</label>
+                      </div>
+                      <div class="col-auto"><a class="form-text small" href="#">Forgot password?</a></div>
+                    </div>
+                    <input class="form-control" name="loginPassword" id="loginPassword" placeholder="Password" type="password" required data-msg="Please enter your password">
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" id="loginRemember" type="checkbox">
+                      <label class="form-check-label text-muted" for="loginRemember"> <span class="text-sm">Remember me for 30 days</span></label>
+                    </div>
+                  </div>
+                  <div class="d-grid mb-3">
+                    <button class="btn btn-outline-info" type="submit"><i class="fa fa-sign-in-alt me-2"></i> Log in</button>
+                  </div>
+                </form>
+                <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
+                <div class="text-center">
+                  <button class="btn btn btn-outline-info letter-spacing-0" data-bs-toggle="tooltip" title="Connect with Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Connect with Facebook</span></button>
+                  <button class="btn btn btn-outline-muted letter-spacing-0" data-bs-toggle="tooltip" title="Connect with Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Connect with Google</span></button>
+                </div>
+              </div>
+              <div class="tab-pane fade px-3" id="loginModalTabRegister" role="tabpanel" aria-labelledby="loginModalLinkRegister">
+                <p class="text-muted text-sm">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit.                                            </p>
+                <form action="customer-orders.html" method="get">
+                  <div class="mb-3">
+                    <label class="form-label" for="registerName">Name</label>
+                    <input class="form-control" id="registerName" type="text">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="registerEmail">Email</label>
+                    <input class="form-control" id="registerEmail" type="text">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="registerPassword">Password</label>
+                    <input class="form-control" id="registerPassword" type="password">
+                  </div>
+                  <div class="d-grid mb-3 text-center">
+                    <button class="btn btn-outline-info" type="submit"><i class="far fa-user me-2"></i>Register                       </button>
+                  </div>
+                </form>
+                <hr class="my-3 hr-text letter-spacing-2" data-content="OR CONNECT WITH">
+                <div class="text-center">
+                  <button class="btn btn btn-outline-info letter-spacing-0" data-bs-toggle="tooltip" title="Connect with Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Connect with Facebook</span></button>
+                  <button class="btn btn btn-outline-muted letter-spacing-0" data-bs-toggle="tooltip" title="Connect with Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Connect with Google                                      </span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer>
+      <!-- Main block - menus, subscribe form-->
+      <div class="py-6 text-muted"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 pe-lg-5 pe-xl-6 mb-5 mb-lg-0">
+              <h6 class="text-info letter-spacing-1 mb-4">PETSHOPKU</h6>
+              <p class="text-sm mb-3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+              <!-- <form action="#" id="newsletter-form">
+                <div class="input-group input-group-underlined mb-3">
+                  <input class="form-control form-control-underlined" type="email" placeholder="Your Email Address" aria-label="Your Email Address">
+                  <button class="btn btn-underlined text-gray-700 py-0" type="button"> 
+                    <svg class="svg-icon w-2rem h-2rem">
+                      <use xlink:href="#envelope-1"> </use>
+                    </svg>
+                  </button>
+                </div>
+              </form> -->
+            </div>
+            <div class="col-lg-7">      
+              <div class="row">                
+                <div class="col-lg-6"><a class="d-lg-none block-toggler my-3" data-bs-toggle="collapse" href="#footerMenu0" aria-expanded="false" aria-controls="footerMenu0">Belanja<span class="block-toggler-icon"></span></a>
+                  <!-- Footer collapsible menu-->
+                  <div class="expand-lg collapse" id="footerMenu0">
+                    <h6 class="text-info letter-spacing-1 mb-4 d-none d-lg-block">Belanja</h6>
+                    <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                      <li class="mb-2"> <a class="text-muted text-info-hover link-animated" href="#">Pet Product</a></li>
+                      <li class="mb-2"> <a class="text-muted text-info-hover link-animated" href="#">Pet Service</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6"><a class="d-lg-none block-toggler my-3" data-bs-toggle="collapse" href="#footerMenu2" aria-expanded="false" aria-controls="footerMenu2">Akun Anda<span class="block-toggler-icon"></span></a>
+                  <!-- Footer collapsible menu-->
+                  <div class="expand-lg collapse" id="footerMenu2">
+                    <h6 class="text-info letter-spacing-1 mb-4 d-none d-lg-block">Your account</h6>
+                    <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                      <li class="mb-2"> <a class="text-muted text-info-hover link-animated" href="user-login.html">Login</a></li>
+                      <li class="mb-2"> <a class="text-muted text-info-hover link-animated" href="user-login.html">Register</a></li>
+                      <li class="mb-2"> <a class="text-muted text-info-hover link-animated" href="wishlist.html">Wishlist</a></li>
+                      <li class="mb-2"> <a class="text-muted text-info-hover link-animated" href="katalog-produk.html">Produk Kami</a></li>
+                      <li class="mb-2"> <a class="text-muted text-info-hover link-animated" href="pembayaran.html">Pembayaran</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright section of the footer-->
+      <div class="py-4 fw-light text-muted">
+        <div class="container">
+          <div class="row align-items-center text-sm text-gray-500">
+            <div class="col-lg-4 text-center text-lg-start">
+              <p class="mb-lg-0">&copy; 2024, Petshopku.  All rights reserved.</p>
+            </div>
+            <div class="col-lg-8">
+              <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-lg-end">
+                <li class="list-inline-item"> <a class="text-reset" href="#">Terms &amp; Conditions </a></li>
+                <li class="list-inline-item"> <a class="text-reset" href="#">Privacy &amp; cookies </a></li>
+                <li class="list-inline-item"> <a class="text-reset" href="#">Accessibility </a></li>
+                <li class="list-inline-item"> <a class="text-reset" href="#">Customer Data Promise </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer end-->
+    <!-- JavaScript files-->
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to Bootstrapious website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.3f375885.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/icons/orion-svg-sprite.svg'); 
+      injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/icons/varkala-clothes.svg'); 
+      injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/img/shape/blob-sprite.svg'); 
+      
+    </script>
+    <!-- jQuery-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Bundle -->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper Carousel                       -->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Bootstrap Select-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!-- AOS - AnimationOnScroll-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/aos/aos.js"></script>
+    <!-- Custom Scrollbar-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom-scrollbar-init.f148089f.js"></script>
+    <!-- Smooth scroll-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <!-- Object Fit Images - Fallback for browsers that don't support object-fit-->
+    <script src="https://d19m59y37dris4.cloudfront.net/varkala/2-1/vendor/object-fit-images/ofi.min.js"></script>
+    <!-- JavaScript Countdown-->
+    <script src="js/countdown.782bfd78.js"></script>
+    <script>
+      var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+      var countdown = new Countdown('countdown', deadline);
+      
+    </script>
+    <!-- Some theme config-->
+    <script>
+      var options = {
+          navbarExpandPx: 992
+      }
+      
+    </script>
+    <!-- Main Theme files-->
+    <script src="js/sliders-init.d339d105.js"></script>
+    <script src="js/theme.4c87e97a.js"></script>
+  </body>
+</html>
